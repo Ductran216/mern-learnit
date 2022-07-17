@@ -1,0 +1,56 @@
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "Duc",
+    "password": "1234"
+}
+
+###
+
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "Duc",
+    "password": "1234"
+}
+
+###
+
+POST http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmQyYTQxMDI2YzQ1NzlkZjZmNzczNWEiLCJpYXQiOjE2NTc5NzQ1NDd9.3rGljdEyyr5sLGm5FJhuiGXLZ2NAKIA0VnGLewNHACw
+
+{
+    "title": "Post",
+    "description": "abc",
+    "url": "google.com",
+    "status": "LEARNED"
+}
+
+###
+
+GET http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmQyYTQxMDI2YzQ1NzlkZjZmNzczNWEiLCJpYXQiOjE2NTc5NzQ1NDd9.3rGljdEyyr5sLGm5FJhuiGXLZ2NAKIA0VnGLewNHACw
+
+
+###
+
+PUT http://localhost:5000/api/posts/62d2bffb8cd9a4fc32af3c1c
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmQyYTQxMDI2YzQ1NzlkZjZmNzczNWEiLCJpYXQiOjE2NTc5NzQ1NDd9.3rGljdEyyr5sLGm5FJhuiGXLZ2NAKIA0VnGLewNHACw
+
+{
+    "title": "Updated",
+    "description": "1269",
+    "url": "facebook.com",
+    "status": "TO LEARN"
+}
+
+###
+
+DELETE http://localhost:5000/api/posts/62d2bffb8cd9a4fc32af3c1c
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmQyYTQxMDI2YzQ1NzlkZjZmNzczNWEiLCJpYXQiOjE2NTc5NzQ1NDd9.3rGljdEyyr5sLGm5FJhuiGXLZ2NAKIA0VnGLewNHACw
